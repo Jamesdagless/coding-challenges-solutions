@@ -1,0 +1,21 @@
+def second_largest_integer(integer):
+    """
+    Program to find the second largest in a list of integers
+
+    Args:
+        User inputs a list of integers
+
+    Returns:
+        Returns second-largest integer from list
+
+        """
+    largest = max(integer)
+    if largest in integer:
+        integer.remove(largest)
+        return max(integer)
+    else:
+        return None
+
+
+result = second_largest_integer([1, 2, 3, 4, 5, 6, 7])
+print(f"The second Largest Integer is: {result}")
