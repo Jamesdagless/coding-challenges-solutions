@@ -1,0 +1,21 @@
+def Count_Vowels_In_Sentence(input_string):
+    """
+    Counts the number of vowels in a given string.
+
+    Args:
+        input_string: A string containing the input to be analyzed.
+
+    Returns:
+        An integer representing the number of vowels found in the input string.
+    """
+    count = 0
+    vowels = "aeiouAEIOU"
+    for word in input_string:
+        for char in word:
+            if char in vowels:
+                count += 1
+
+    return count
+
+
+print(Count_Vowels_In_Sentence("hello my name is james"))
