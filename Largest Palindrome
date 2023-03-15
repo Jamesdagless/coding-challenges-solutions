@@ -1,0 +1,19 @@
+def longest_palindrome(lst):
+    """ Takes a List of Palindromes and returns the largest
+    Args:
+        Inputs a list of strings both palindromes and none palindromes
+    Returns:
+        Returns the largest palindrome from the list
+    """
+    
+    palindromes = []
+    for word in lst:
+        if word == word[::-1]:
+            palindromes.append(word)
+    if palindromes:
+        return max(palindromes, key=len)
+    else:
+        return None
+
+
+print(longest_palindrome(["racecar", "orange", "Level", "Guess", "dog", "pop", "kayak"]))
